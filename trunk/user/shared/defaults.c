@@ -45,7 +45,7 @@ struct nvram_pair router_defaults[] = {
 	{ "lan_dns_x", "1" },			/* LAN DNS [static|dhcp] */
 	{ "lan_dns1", "" },			/* LAN DNS1 */
 	{ "lan_dns2", "" },			/* LAN DNS2 */
-	{ "lan_domain", "" },			/* LAN domain name */
+	{ "lan_domain", "lan" },			/* LAN domain name */
 	{ "lan_stp", "1" },			/* LAN spanning tree protocol */
 
 	/* WAN H/W parameters */
@@ -530,7 +530,7 @@ struct nvram_pair router_defaults[] = {
 	{ "dhcp_end", DEF_LAN_DHCP_END },	/* Last assignable DHCP address */
 	{ "dhcp_enable_x", "1" },
 	{ "dhcp_lease", "86400" },
-	{ "dhcp_gateway_x", "" },
+	{ "dhcp_gateway_x", DEF_LAN_ADDR },
 	{ "dhcp_dns1_x", "" },
 	{ "dhcp_dns2_x", "" },
 	{ "dhcp_dns3_x", "" },
@@ -546,7 +546,7 @@ struct nvram_pair router_defaults[] = {
 	{ "ntp_server1", DEF_NTP_SERVER1 },
 
 	/* DDNS parameters */
-	{ "ddns_enable_x", "1" },
+	{ "ddns_enable_x", "0" },
 	{ "ddns_server_x", "www.asus.com" },
 	{ "ddns_username_x", "" },
 	{ "ddns_passwd_x", "" },
@@ -612,12 +612,12 @@ struct nvram_pair router_defaults[] = {
 	{ "di_lost_delay", "10" },
 	{ "di_lost_action", "0" },
 	{ "di_recon_pause", "0" },
-	{ "di_addr0", "77.88.8.8" },
-	{ "di_addr1", "8.8.8.8" },
-	{ "di_addr2", "208.67.222.222" },
-	{ "di_addr3", "77.88.8.1" },
+	{ "di_addr0", "114.114.114.114" },
+	{ "di_addr1", "180.76.76.76" },
+	{ "di_addr2", "119.29.29.29" },
+	{ "di_addr3", "8.8.8.8" },
 	{ "di_addr4", "8.8.4.4" },
-	{ "di_addr5", "208.67.220.220" },
+	{ "di_addr5", "208.67.222.222" },
 	{ "di_port0", "53" },
 	{ "di_port1", "53" },
 	{ "di_port2", "53" },

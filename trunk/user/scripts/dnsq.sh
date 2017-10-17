@@ -37,9 +37,6 @@ logger -t "dnsmasq" "正在重新配置dnsmasq规则..."
 sed -i '/\/dns\//d' /etc/storage/dnsmasq/dnsmasq.conf
 cat >> /etc/storage/dnsmasq/dnsmasq.conf << EOF
 addn-hosts=/etc/storage/dnsmasq/dns/hosts
-conf-file=/etc/storage/dnsmasq/dns/conf/dnsip
-conf-file=/etc/storage/dnsmasq/dns/conf/dnsad
-conf-file=/etc/storage/dnsmasq/dns/conf/dnsfq
 EOF
 
 if [ ! -f "/etc/storage/userhost" ]; then
