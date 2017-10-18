@@ -268,9 +268,11 @@ do
 	[ -z "$partno" ] && partno=1
 	/sbin/automount.sh $sd_mount AiDisk_$device_name$partno
 done
+sleep 5
+/usr/bin/ttyd -i br0 login 2>&1 | logger -t ttyd
+sleep 5
 run_ftpsamba
 sleep 5
-
 
 EEE
 		chmod 755 "$script_started"
